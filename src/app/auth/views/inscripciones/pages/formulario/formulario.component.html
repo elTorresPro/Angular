@@ -1,0 +1,53 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Agregar Inscripcion</div>
+    <div class="page__content shadow p-3 position-relative">
+        <div class="page__content-data position-absolute text-center">
+            <!--CONTENIDO-->
+            <div class="container">
+
+                <form [formGroup]="formularioInscripcion" (ngSubmit)="guardarInscripcion()" class="form">
+                    <div class="mb-2">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Codigo de Inscripcion</mat-label>
+                            <input formControlName="codigo" matInput>
+                            <small
+                                *ngIf="formularioInscripcion.get('codigo')?.errors?.['required'] && formularioInscripcion.get('codigo')?.touched"
+                                class="text-danger">Campo
+                                requerido</small>
+                        </mat-form-field>
+                    </div>
+                    <div class="mb-2">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Select Alumno</mat-label>
+                            <mat-select formControlName="alumno">
+                                <mat-option *ngFor="let alumno of alumnos" [value]="{nombre: alumno.nombre, apellido:alumno.apellido}">
+                                    {{alumno.id + "-" + alumno.nombre + ' ' + alumno.apellido}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="mb-2">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Select Curso</mat-label>
+                            <mat-select formControlName="curso">
+                                <mat-option *ngFor="let curso of cursos" [value]="{nombreCurso: curso.nombreCurso}">
+                                    {{curso.id + "-" + curso.nombreCurso}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="mb-2">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Fecha De Inscripcion</mat-label>
+                            <input formControlName="fecha" matInput [matDatepicker]="picker">
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <button mat-raised-button color="primary" [disabled]="formularioInscripcion.invalid">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

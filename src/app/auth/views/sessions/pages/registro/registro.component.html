@@ -1,0 +1,62 @@
+<div class="body">
+    <div class="login">
+        <img src="./assets/img/user.png" alt="logo" height="200px">
+        <h1 class="h3 mb-3 fw-normal">Registro</h1>
+        <form [formGroup]="formularioRegister" (ngSubmit)="validacionRegistro()" class="flex flex-column">
+
+            <mat-form-field appearance="fill" class="ancho">
+                <mat-label>Email</mat-label>
+                <mat-icon color="warn" matSuffix>email</mat-icon>
+                <input matInput formControlName="usuario">
+                <p
+                    *ngIf="formularioRegister.get('usuario')?.touched && formularioRegister.get('usuario')?.errors?.['required']">
+                    ¡Este campo es requerido!</p>
+                <p
+                    *ngIf="formularioRegister.get('usuario')?.touched && formularioRegister.get('usuario')?.errors?.['email']">
+                    ¡Formato Email no valido!</p>
+            </mat-form-field>
+
+
+            <mat-form-field appearance="fill" class="ancho">
+                <mat-label>Contraseña</mat-label>
+                <mat-icon color="warn" matSuffix>key</mat-icon>
+                <input matInput formControlName="contrasena" type="password">
+                <p
+                    *ngIf="formularioRegister.get('contrasena')?.touched && formularioRegister.get('contrasena')?.errors?.['required']">
+                    ¡Este campo es requerido!</p>
+                <p
+                    *ngIf="formularioRegister.get('contrasena')?.touched && formularioRegister.get('contrasena')?.errors?.['minlength']">
+                    ¡La contraseña debe tener al menos 6 caracteres!</p>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="ancho">
+                <mat-label>Nombre</mat-label>
+                <mat-icon color="warn" matSuffix>person</mat-icon>
+                <input matInput formControlName="nombre" type="nombre">
+                <p
+                    *ngIf="formularioRegister.get('nombre')?.touched && formularioRegister.get('nombre')?.errors?.['required']">
+                    ¡Este campo es requerido!</p>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="ancho">
+                <mat-label>Avatar Texto</mat-label>
+                <mat-icon color="warn" matSuffix>image</mat-icon>
+                <input matInput formControlName="img" type="img">
+                <p
+                    *ngIf="formularioRegister.get('img')?.touched && formularioRegister.get('img')?.errors?.['required']">
+                    ¡Este campo es requerido!</p>
+            </mat-form-field>
+
+            <div class="row">
+                <div class="toggle">
+                    <mat-slide-toggle formControlName="admin" class="text-bg-dark">¿Eres Administrador?</mat-slide-toggle>
+                </div>
+            </div>
+            <br>
+            <button type="submit" mat-raised-button color="primary"
+                [disabled]="formularioRegister.invalid">Registrarse</button>
+        </form>
+        <br>
+        <button class="ancho" routerLink="/sessions/login" mat-raised-button mat-button color="warn">Volver</button>
+    </div>
+</div>

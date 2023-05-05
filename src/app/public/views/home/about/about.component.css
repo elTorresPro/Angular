@@ -1,0 +1,93 @@
+h1 {
+    font-family: Georgia;
+    font-weight: bold;
+    font-style: italic;
+    margin: 10px;
+    text-shadow: 2px 2px #000;
+  }
+  h3{
+    text-align: justify;
+  }
+  p {
+    font-family: Georgia;
+    font-style: italic;
+    text-shadow: 1px 1px #000;
+  }
+  
+  
+  .hero-image {
+    display: block;
+    position: relative;
+    height: 100vh;
+    background-image: url("https://www.ceupe.com/images/easyblog_articles/3583/profesion-de-programador-web.jpg"); /*https://www.bing.com/images/search?view=detailv2&form=SBIHVR&lightschemeovr=1&iss=sbi&q=imgurl:https%3A%2F%2Fwww.ceupe.com%2Fimages%2Feasyblog_articles%2F3583%2Fprofesion-de-programador-web.jpg&pageurl=https%3A%2F%2Fwww.ceupe.com%2Fimages%2Feasyblog_articles%2F3583%2Fprofesion-de-programador-web.jpg&pagetl=profesion-de-programador-web.jpg+(1280%C3%97854)&imgsz=1281x855&selectedindex=0&id=804A9ED73FF94350F7DE52B4E8EE0774EFE19881&ccid=0W0Ti7fY&mediaurl=https%3A%2F%2Fwww.redbots.de%2Fwp-content%2Fuploads%2Fprogrammer.jpg&exph=1155&expw=1731&vt=2&simid=608040582284733795&ck=031B47456842880E9E4A54EA64310D32&thid=OIP.0W0Ti7fYC5wRYAvhpO-GwQHaE8&cdnurl=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR.d16d138bb7d80b9c11600be1a4ef86c1%3Frik%3DgZjh73QH7ui0Ug%26pid%3DImgRaw%26r%3D0*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  
+  
+  .hero-text button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 12px 35px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    border: 5px solid black;
+    margin-left: -1px;
+    margin-top: 5%;
+    font-size: 8pt;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-family: Geogia;
+    font-style: italic;
+  }
+  
+  .hero-text button:hover {
+    background-color: transparent;
+    color: white;
+    border: 5px solid black;
+    text-shadow: 2px 2px #000;
+  }
+  
+  
+  .box {
+    margin: 0 auto;
+    padding: 35px;
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+  }
+  
+  /*.button {
+      font-size: 1em;
+      padding: 10px;
+      color: #fff;
+      border: 2px solid #06D85F;
+      border-radius: 20px/50px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+    }
+    .button:hover {
+      background: #06D85F;
+    }*/
+  
+  
+  

@@ -1,0 +1,69 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Editar Curso</div>
+    <div class="page__content shadow p-3 position-relative">
+        <div class="page__content-data position-absolute text-center">
+            <!--CONTENIDO-->
+            <div class="container">
+
+                <form class="form" [formGroup]="formulario" (ngSubmit)="editarCurso()">
+
+                    <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Nombre Curso</mat-label>
+                            <input matInput formControlName="nombreCurso">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="mb-2">
+                        <mat-form-field appearance="fill" class="fill">
+                            <mat-label>Comisión</mat-label>
+                            <input matInput formControlName="comision">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="mb-2">
+                        <mat-form-field appearance="fill" class="fill">
+                            <mat-label>Profesor</mat-label>
+                            <input matInput formControlName="profesor">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="mb-2">
+                        <mat-form-field appearance="fill" class="fill">
+                            <mat-label>Fecha Inicio</mat-label>
+                            <input matInput [matDatepicker]="fechaInicio" formControlName="inicio">
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matSuffix [for]="fechaInicio"></mat-datepicker-toggle>
+                            <mat-datepicker #fechaInicio></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="mb-2">
+                        <mat-form-field appearance="fill" class="fill">
+                            <mat-label>Fecha Fin</mat-label>
+                            <input matInput [matDatepicker]="fechaFin" formControlName="fin">
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matSuffix [for]="fechaFin"></mat-datepicker-toggle>
+                            <mat-datepicker #fechaFin></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+
+
+                    <div class="mb-2">
+                        <mat-form-field appearance="fill" class="fill">
+                            <mat-label>image</mat-label>
+                            <input matInput formControlName="img">
+                        </mat-form-field>
+                    </div>
+
+
+                    <div class="mb-2">
+                        <button type="submit" mat-raised-button color="primary">Guardar Cambios </button>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

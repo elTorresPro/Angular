@@ -1,0 +1,41 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+mat-drawer{
+    width: 260px;
+    background-color: cadetblue;
+}
+
+mat-drawer-container{
+    height: 100%;
+}
+
+.page {
+    color: cornflowerblue;
+    padding: 0 1rem;
+    background: cadetblue;
+}
+.page__box {
+    min-height: 120px;
+    background: cadetblue;
+    margin: 0 -1rem;
+    font-size: 36px;
+}
+.page__content {
+    min-height: calc(100vh - 178px);
+    border-radius: 10px;
+    margin-top: -2rem;
+    background: cornflowerblue;
+    color: rgb(6, 5, 82);
+    font-size: 2rem;
+}
+.page__content-data {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+

@@ -1,0 +1,80 @@
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    margin: 10px;
+    text-shadow: 2px 2px rgb(12, 0, 17);
+  }
+  
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style:normal;
+    text-shadow: 1px 1px rgb(12, 0, 17);
+    font-size: 25px;
+
+  }
+  
+  
+  .hero-image {
+    display: block;
+    position: relative;
+    height: 100vh;
+    background-image: url("https://th.bing.com/th/id/R.3a0aa7fe7f336d76016318720e1ee62c?rik=ehwvvtdzYbnbPA&pid=ImgRaw&r=0"); /*https://www.bing.com/images/search?view=detailV2&ccid=Ogqn%2fn8z&id=A366EF65DFA8F00ACD483CDBB96173D7BE2F1C7A&thid=OIP.Ogqn_n8zbXYBYxhyDh7mLAHaDt&mediaurl=https%3a%2f%2fwww.ulima.edu.pe%2fsites%2fdefault%2ffiles%2fstyles%2f600x300%2fpublic%2fevent%2fimg%2feegg_2018-04-16_expo_aprendiendo_a_investigar_600x300.png%3fitok%3dQHJuB9rv&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.3a0aa7fe7f336d76016318720e1ee62c%3frik%3dehwvvtdzYbnbPA%26pid%3dImgRaw%26r%3d0&exph=300&expw=600&q=estudios&simid=608048201568515225&FORM=IRPRST&ck=ED8943575E71086B472D1A7C2D746CB3&selectedIndex=0&ajaxhist=0&ajaxserp=0*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  
+  
+  .hero-text button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 12px 35px;
+    color: white;
+    background-color: rgb(54, 1, 75);
+    text-align: center;
+    cursor: pointer;
+    border: 5px solid rgb(54, 1, 75);
+    margin-left: -1px;
+    margin-top: 5%;
+    font-size: 20pt;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+  }
+  
+  .hero-text button:hover {
+    background-color: transparent;
+    color: white;
+    border: 5px solid rgb(54, 1, 75);
+    text-shadow: 2px 2px rgb(54, 1, 75);
+  }
+  
+  
+  .box {
+    margin: 0 auto;
+    padding: 35px;
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+  }
+  
+    
+  
+  

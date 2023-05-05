@@ -1,0 +1,28 @@
+<mat-nav-list>
+    <div class="logo py-4">
+        <img src="https://web.senati.marketing/cdn/landing/image/landing-2020-11-17-092407-e3e07960b03e01d.png"
+            alt="">
+    </div>
+    <mat-divider></mat-divider>
+    <h2 matSubheader class="mt-2 center">Estudiantes</h2>
+
+    <a mat-list-item routerLink="/alumnos" routerLinkActive="list-item-active">
+        <mat-icon>person</mat-icon>
+        Alumnos</a>
+    <a mat-list-item routerLink="/alumnos/form" routerLinkActive="list-item-active" *ngIf="sesion.usuarioActivo?.admin">
+        <mat-icon>person_add</mat-icon>
+        AgregarAlumnos</a>
+    <a mat-list-item routerLink="/cursos" routerLinkActive="list-item-active">
+        <mat-icon>collections_bookmark</mat-icon>
+        Cursos</a>
+    <a mat-list-item routerLink="/cursos/form" routerLinkActive="list-item-active" *ngIf="sesion.usuarioActivo?.admin">
+        <mat-icon>library_add</mat-icon>
+        AgregarCursos</a>
+    <a mat-list-item routerLink="/inscripciones" routerLinkActive="list-item-active">
+        <mat-icon>group</mat-icon>
+        Inscripcion</a>
+    <a mat-list-item routerLink="/inscripciones/form" routerLinkActive="list-item-active"
+        *ngIf="sesion.usuarioActivo?.admin">
+        <mat-icon>group_add</mat-icon>
+        AgregarInscripcion</a>
+</mat-nav-list>

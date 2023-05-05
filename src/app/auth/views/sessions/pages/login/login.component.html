@@ -1,0 +1,38 @@
+<div class="body">
+    <div class="login">
+        <img src="./assets/img/user.png" alt="logo" height="200px">
+        <h1 class="h3 mb-3 fw-normal">Login</h1>
+        <form [formGroup]="formulario" (ngSubmit)="validacionUsuario()" class="flex flex-column">
+
+            <mat-form-field appearance="fill" class="ancho">
+                <mat-label>Usuario</mat-label>
+                <mat-icon color="warn" matSuffix>email</mat-icon>
+                <input matInput formControlName="usuario">
+                <p *ngIf="formulario.get('usuario')?.touched && formulario.get('usuario')?.errors?.['required']">
+                    ¡Este campo es requerido!</p>
+                <p *ngIf="formulario.get('usuario')?.touched && formulario.get('usuario')?.errors?.['email']">
+                    ¡Formato Email no valido!</p>
+            </mat-form-field>
+
+
+            <mat-form-field appearance="fill" class="ancho">
+                <mat-label>Contraseña</mat-label>
+                <mat-icon matSuffix color="warn">key</mat-icon>
+                <input type="password" matInput formControlName="contrasena">
+                <p *ngIf="formulario.get('contrasena')?.touched && formulario.get('contrasena')?.errors?.['required']">
+                    ¡Este campo es requerido!</p>
+            </mat-form-field>
+
+            <div class="row">
+                <div>
+                    <button type="submit" mat-raised-button color="primary" [disabled]="formulario.invalid">Go</button>
+                </div>
+            </div>
+            <br>
+            <button class="ancho" routerLink="/App/home" mat-raised-button mat-button color="danger">Volver</button>
+            <br>
+            <br>
+            <button class="ancho" routerLink="/sessions/registro" mat-raised-button mat-button color="warn">Registrarse</button>
+        </form>
+    </div>
+</div>

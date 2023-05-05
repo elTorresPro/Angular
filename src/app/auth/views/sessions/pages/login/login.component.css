@@ -1,0 +1,23 @@
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    background-color: rgb(189, 255, 255);
+    height: 100%;
+  }
+  .login {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .ancho {
+    width: 80%;
+  }
+
+  img{
+    height: 200px;
+  }

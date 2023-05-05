@@ -1,0 +1,18 @@
+
+<div class="container">
+    <mat-card class="example-card" *ngIf="!!curso">
+        <mat-card-header>
+            <mat-card-title>{{curso.nombreCurso}}</mat-card-title>
+            <mat-card-subtitle>Comision: {{curso.comision}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="curso.img" alt="curso.img">
+        <mat-card-content>
+            <p>
+                {{curso.info}}
+            </p>
+            <h3>Fecha inicio: {{curso.fechaInicio | date}}</h3>
+            <h3>Fecha fin: {{curso.fechaFin | date}}</h3>
+            <h3>Dictado por: {{curso.profesor}}</h3>
+        </mat-card-content>
+    </mat-card>
+</div>

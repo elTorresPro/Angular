@@ -1,0 +1,16 @@
+.container{
+  padding-top: 12%;
+}
+.example-card {
+    max-width: 300px;
+    margin: auto;
+  }
+mat-card-content{
+  padding-top: 20px;
+}
+
+.example-header-image mat-card-avatar{
+width: 15px;
+height: 15px;
+}
+
